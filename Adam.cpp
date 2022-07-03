@@ -13,9 +13,9 @@
 
 // this are global variables; it means that any command can use this variables
 
-//ofstream– This class represents an output stream. It’s used for creating files and writing information to files.
-//ifstream– This class represents an input stream. It’s used for reading information from data files.
-//fstream– This class generally represents a file stream. It comes with ofstream/ifstream capabilities. This means it’s capable of creating files, writing to files, reading from data files.
+//ofstreamâ€“ This class represents an output stream. Itâ€™s used for creating files and writing information to files.
+//ifstreamâ€“ This class represents an input stream. Itâ€™s used for reading information from data files.
+//fstreamâ€“ This class generally represents a file stream. It comes with ofstream/ifstream capabilities. This means itâ€™s capable of creating files, writing to files, reading from data files.
 
 int startpoint;
 std::string z = "ADAM";
@@ -148,6 +148,7 @@ void mainbody(){
     ofstream of("startpoint.txt");
     of << x;
     of.close();
+mainbody2();
 }
 else if (startpoint >= 4607326){
 	cout << " You got it right!" << endl;
