@@ -1,4 +1,5 @@
-// COMPUTER TROJAN ADAM 1.1
+// COMPUTER ADAM 1.1
+// Friday, October 8, ?2021, 9:09:54 PM
 
 #include <iostream>
 #include <string>
@@ -9,7 +10,11 @@
 #include <stdlib.h> // for clearing output
 #include <stdio.h>
 #include <vector>
+#include <iomanip> //this library is needed for setw
+#include <MMSystem.h> // for sounds
 
+
+std:: string z = "ADAM: ";
 
 // this are global variables; it means that any command can use this variables
 
@@ -18,10 +23,11 @@
 //fstream– This class generally represents a file stream. It comes with ofstream/ifstream capabilities. This means it’s capable of creating files, writing to files, reading from data files.
 
 int startpoint;
-std::string z = "ADAM";
-void mainbody();
+
+void mainbody();     //we should remember that the compiler reads the code per line.
 void mainbody2();
 void startup();
+
 
 ///// EMOTIONS /////
 
@@ -37,39 +43,51 @@ using namespace std;
 void Starting()
 {
 
-
-
-	cout << "Processing |--------- 10%" << endl;
+  	// cout << setw(25) << endl; //Modify the number to align it to the center
+	cout << "\n\n\n\n\n\n\n\n\n" << setw(53) <<  "Processing |--------- 10%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing ||-------- 20%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<   setw(53) <<"Processing ||-------- 20%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing |||------- 30%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<  setw(53) << "Processing |||------- 30%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing ||||------ 40%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<  setw(53) << "Processing ||||------ 40%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing |||||----- 50%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<  setw(53) << "Processing |||||----- 50%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing ||||||---- 60%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<   setw(53) << "Processing ||||||---- 60%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing |||||||--- 70%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<   setw(53) << "Processing |||||||--- 70%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing ||||||||-- 80%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<   setw(53) << "Processing ||||||||-- 80%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing |||||||||- 90%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<  setw(53) << "Processing |||||||||- 90%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << "Processing |||||||||| 100%" << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<   setw(53) <<"Processing |||||||||| 100%" << endl;
 	Sleep(100);
 	system ("CLS");
-	cout << " COMPLETE " << endl;
+	
+	cout << "\n\n\n\n\n\n\n\n\n" <<  setw(30) << " COMPLETE " << endl;
+	PlaySound("notification-01.wav", NULL,SND_SYNC); // make sure to use a .wav file, not .mp3 or anything else! This function can play only .wav files
+	Sleep(2000);
+	system ("CLS");
 	
 int x;
 ofstream beep("startpoint.txt");
@@ -82,7 +100,7 @@ startup();
 
 if (x == 0){
 	
-Beep(800,500); //
+Beep(800,500); 
 Beep(587.33,1000);
 Beep(698.46,500);
 Beep(800,500);
@@ -148,7 +166,7 @@ void mainbody(){
     ofstream of("startpoint.txt");
     of << x;
     of.close();
-mainbody2();
+    mainbody2();
 }
 else if (startpoint >= 4607326){
 	cout << " You got it right!" << endl;
@@ -205,6 +223,7 @@ void mainbody2(){
 "Yes! as always!",
 "I am doing fine as always!",
 "His name is Michael Jackson, Hee-Hee!",
+
 };
 
 	do
