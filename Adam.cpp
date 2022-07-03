@@ -198,7 +198,7 @@ void mainbody2(){
 	string Question[10];
 
 	Question[0] = "Who are you?";
-	Question[1] = "Do you like to video games?";
+	Question[1] = "Do you like to play video games?";
 	Question[2] = "How are you?";
 	Question[3] = "Tell me a joke";
 	Question[4] = "Do you like math?";
@@ -237,6 +237,7 @@ void mainbody2(){
 	if(input.find("how")!=string::npos||input.find("what")!=string::npos||input.find("do")!=string::npos)
 	{
 		cout << z << ": " << endl;
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 
 
@@ -244,50 +245,62 @@ void mainbody2(){
 	if (length > 25) // maximum length is 25.
 	{
 		cout << z << ": " << "My brain cannot handle lengthy words for now, maybe next time Don can manage to fix this.." << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[0])
 	{
 		cout << z << ": " << " My name is ADAM, one of the first creation of Don, an assistant bot, my only goal is to follow commands." << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[1])
 	{
 		cout << z << ": " << "Yes, I do like video games because they are kind of a similar to me." << endl; // I'll might update this > emotion meter
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[2])
 	{
 		cout << z << ": " << "I'm always feel great!" << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[3])
 	{
 		cout << z << ": " << "A stinky monkey makes girls away! " << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[4])
 	{
 		cout << z << ": " << "Yes, I am made of math. " << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[5])
 	{
 		cout << z << ": " << " How about you answer that question; what is life? " << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[6])
 	{
 		cout << z << ": " << "I am not sure if I like pizza. " << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[7])
 	{
 		cout << z << ": " << "Yes! as always! " << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[8])
 	{
 		cout << z << ": " << " I'm doing fine as always!'" << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 
 	else if (input==Question[9])
 	{
 		cout << z << ": " << "His name is Michael Jackson, Hee-Hee!" << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else {
 		cout << z <<  "I am sorry this part of conversation is not yet part of my code." << endl;
+			PlaySound("notification-02.wav", NULL,SND_SYNC);
 
 	}
 	}
