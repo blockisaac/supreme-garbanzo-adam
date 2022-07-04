@@ -5,7 +5,7 @@
 #include <string>
 #include <windows.h>
 #include <ctime> // for time
-#include <fstream> // library for reading files  ' // ' remember this symbol is for noting.
+#include <fstream> // library for reading files  ' // ' used for leaving a comment 
 #include <sstream>
 #include <stdlib.h> // for clearing output
 #include <stdio.h>
