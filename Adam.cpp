@@ -1,6 +1,6 @@
 // COMPUTER ADAM 1.1
 // Friday, October 8, ?2021, 9:09:54 PM
-
+//  -lwinmm linker
 #include <iostream>
 #include <string>
 #include <windows.h>
