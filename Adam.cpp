@@ -1,6 +1,6 @@
 // COMPUTER ADAM 1.1
 // Friday, October 8, ?2021, 9:09:54 PM
-//  -lwinmm linker
+
 #include <iostream>
 #include <string>
 #include <windows.h>
@@ -18,9 +18,9 @@ std:: string z = "ADAM: ";
 
 // this are global variables; it means that any command can use this variables
 
-//ofstream– This class represents an output stream. It’s used for creating files and writing information to files.
-//ifstream– This class represents an input stream. It’s used for reading information from data files.
-//fstream– This class generally represents a file stream. It comes with ofstream/ifstream capabilities. This means it’s capable of creating files, writing to files, reading from data files.
+//ofstreamâ€“ This class represents an output stream. Itâ€™s used for creating files and writing information to files.
+//ifstreamâ€“ This class represents an input stream. Itâ€™s used for reading information from data files.
+//fstreamâ€“ This class generally represents a file stream. It comes with ofstream/ifstream capabilities. This means itâ€™s capable of creating files, writing to files, reading from data files.
 
 int startpoint;
 
@@ -100,23 +100,9 @@ startup();
 
 if (x == 0){
 	
-Beep(800,500); 
+
 Beep(587.33,1000);
-Beep(698.46,500);
-Beep(800,500);
-Beep(587.33,1000);
-Beep(698.46,500);
-Beep(880,250);
-Beep(1046.50,250);
-Beep(987.77,500);
-Beep(783.99,500);
-Beep(698.46,250);
-Beep(783.99,250);
-Beep(880,500);
-Beep(587.33,500);
-Beep(523.25,250);
-Beep(659.26,250);
-Beep(587.33,750);
+
 ofstream beep("startpoint.txt");
 x = +1;
 beep << x;
@@ -168,7 +154,7 @@ void mainbody(){
     of.close();
     mainbody2();
 }
-else if (startpoint >= 4607326){
+else if (startpoint >= 1){
 	cout << " You got it right!" << endl;
 	std::ofstream ofs; // resets the start
 	ofs.open("startpoint.txt", std::ofstream::out | std::ofstream::trunc);
@@ -197,6 +183,8 @@ void mainbody2(){
 	string input;
 	string Question[10];
 
+// SOCIAL QUESTIONS
+
 	Question[0] = "Who are you?";
 	Question[1] = "Do you like to play video games?";
 	Question[2] = "How are you?";
@@ -208,7 +196,7 @@ void mainbody2(){
 	Question[8] = "How is your life?";
 	Question[9] = "Who created you?";
 
-
+// COMMANDS 
 
 
 	string answer[10]={
@@ -236,71 +224,83 @@ void mainbody2(){
 
 	if(input.find("how")!=string::npos||input.find("what")!=string::npos||input.find("do")!=string::npos)
 	{
-		cout << z << ": " << endl;
 		PlaySound("notification-02.wav", NULL,SND_SYNC);
+		cout << z << ": " << endl;
+	
 	}
 
 
 	int length = input.size(); // we will use this as a limit for lenghty sentences for now.
 	if (length > 25) // maximum length is 25.
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "My brain cannot handle lengthy words for now, maybe next time Don can manage to fix this.." << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
 	}
 	else if (input==Question[0])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << " My name is ADAM, one of the first creation of Don, an assistant bot, my only goal is to follow commands." << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+		
 	}
 	else if (input==Question[1])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "Yes, I do like video games because they are kind of a similar to me." << endl; // I'll might update this > emotion meter
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+		
 	}
 	else if (input==Question[2])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "I'm always feel great!" << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+		
 	}
 	else if (input==Question[3])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "A stinky monkey makes girls away! " << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+	
 	}
 	else if (input==Question[4])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "Yes, I am made of math. " << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+	
 	}
 	else if (input==Question[5])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << " How about you answer that question; what is life? " << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+
 	}
 	else if (input==Question[6])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "I am not sure if I like pizza. " << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+
 	}
 	else if (input==Question[7])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "Yes! as always! " << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+
 	}
 	else if (input==Question[8])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << " I'm doing fine as always!'" << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+
 	}
 
 	else if (input==Question[9])
 	{
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z << ": " << "His name is Michael Jackson, Hee-Hee!" << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+
 	}
 	else {
+		PlaySound("notification-02.wav", NULL,SND_SYNC);
 		cout << z <<  "I am sorry this part of conversation is not yet part of my code." << endl;
-			PlaySound("notification-02.wav", NULL,SND_SYNC);
+
 
 	}
 	}
